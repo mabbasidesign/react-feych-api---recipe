@@ -8,7 +8,6 @@ const App = () => {
 const APP_ID = "6348b915";
 const APP_KEY = "f2f9356790918ea18bcac41a180af131";
 
-// const [counter, setCounter] = useState(0);
 const [recipes, setRecipes] = useState([]);
 
 useEffect(() => {
@@ -30,10 +29,14 @@ const getRecipes = async () => {
                     type="submit">
                 Search
                 </button>
-                {/* <h1 onClick={() => setCounter(counter + 1)}> {counter} </h1> */}
             </form>
             {recipes.map(recipe => (
-                <Recipe />
+                <Recipe
+                    key={recipe.recipe.key}
+                    title={recipe.recipe.label}
+                    calories={recipe.recipe.calories}
+                    image={recipe.recipe.image}
+                />
             ))}
         </div>
      );
