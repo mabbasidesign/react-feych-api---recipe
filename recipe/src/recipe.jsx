@@ -2,14 +2,14 @@ import React from 'react';
 
 const Recipe = ({title, calories, image, ingrediants}) => {
     return (
-        <div>
-            <h1>{title}</h1>
+        <div className="recipe-wrapper">
+            <h2>{title}</h2>
             {/* <ol>
                 {ingrediants.map(ingrediant => (
                     <li>{ingrediant.text}</li>
                 ))}
             </ol> */}
-            <h2>{calories}</h2>
+            <h3>{calories}</h3>
             <img src={image} alt=""/>
         </div>
     );
