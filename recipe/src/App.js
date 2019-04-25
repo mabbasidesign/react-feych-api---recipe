@@ -2,7 +2,6 @@ import React,{useEffect, useState} from 'react';
 import './App.css';
 import Recipe from './recipe';
 
-
 const App = () => {
 
 const APP_ID = "6348b915";
@@ -44,15 +43,17 @@ const getSearch = (e) => {
                 Search
                 </button>
             </form>
-            {recipes.map(recipe => (
-                <Recipe
-                    key="id"
-                    title={recipe.recipe.label}
-                    calories={recipe.recipe.calories}
-                    image={recipe.recipe.image}
-                    ingrediants={recipe.recipe.ingrediants}
-                />
-            ))}
+            <div className="recipes">
+                {recipes.map(recipe => (
+                    <Recipe
+                        key="id"
+                        title={recipe.recipe.label}
+                        calories={recipe.recipe.calories}
+                        image={recipe.recipe.image}
+                        ingrediants={recipe.recipe.ingrediants}
+                    />
+                ))}
+            </div>
         </div>
      );
 }
