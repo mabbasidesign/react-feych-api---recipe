@@ -24,7 +24,7 @@ const getRecipes = async () => {
 
 const updateSearch = (e) => {
     setSearch(e.target.value);
-    // setQuery(search);
+    setQuery(search);
 }
 
 const getSearch = (e) => {
